@@ -1,0 +1,11 @@
+#calc button:nth-child(34) {
+    grid-column: 4/6;
+}
+
+#calc button:nth-child(1) {
+    background-color: rgb(253, 98, 98);
+}
+
+#calc button:nth-child(1):hover {
+    background-color: rgb(250, 129, 129);
+}
