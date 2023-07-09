@@ -36,7 +36,7 @@ app.post('/api/prog', (req, res) => {
     // Делайте что-то с полученными данными
     let result;
     try{
-        result = '' + parser.evaluate(mess);
+        result = 'hi ' + mess;
     }
     catch(err){
         result = 'Error: invalid expression';
@@ -55,6 +55,23 @@ app.get('/main/style-main.css', (request, response) => {
 app.get('/main/client-main.js', (request, response) => {
     response.sendFile(__dirname + '/main/client-main.js');
 });
+app.get('/fonts/Roboto-Medium.ttf', (request, response) => {
+    response.sendFile(__dirname + '/fonts/Roboto-Medium.ttf');
+});
+
+
+
+app.get('/prog/prog.html', (request, response) => {
+    response.sendFile(__dirname + '/prog/prog.html');
+});
+app.get('/prog/style-prog.css', (request, response) => {
+    response.sendFile(__dirname + '/prog/style-prog.css');
+});
+app.get('/prog/client-prog.js', (request, response) => {
+    response.sendFile(__dirname + '/prog/client-prog.js');
+});
+
+
 
 
 app.get('/style.css', (request, response) => {
@@ -68,4 +85,4 @@ app.get('/index.html', (request, response) => {
 
 
 // начинаем прослушивать подключения на 3000 порту
-app.listen(3000, ()=>console.log('Сервер начал работу на порту 3000'));
+const server = app.listen(3000, ()=>console.log('Сервер начал работу на порту 3000'));
