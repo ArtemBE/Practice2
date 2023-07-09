@@ -13,6 +13,8 @@ app.get("/", function(request, response){
     response.send("<h2>Привет Express!</h2>");
 });
 
+
+
 app.post('/api/data', (req, res) => {
     let mess = req.body;
     console.log('Получено сообщение от клиента: ', mess);
@@ -27,6 +29,21 @@ app.post('/api/data', (req, res) => {
     }
     res.send('' + result);
 });
+app.post('/api/prog', (req, res) => {
+    let mess = req.body;
+    console.log('Получено сообщение от клиента: ', mess);
+    mess=mess.replace(/√/g, 'sqrt');
+    // Делайте что-то с полученными данными
+    let result;
+    try{
+        result = '' + parser.evaluate(mess);
+    }
+    catch(err){
+        result = 'Error: invalid expression';
+    }
+    res.send('' + result);
+});
+
 
 
 app.get('/main/mainn.html', (request, response) => {

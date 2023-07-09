@@ -4,49 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="./../style.css">
     <link rel="stylesheet" href="./style-prog.css">
     <title>Document</title>
 </head>
 <body>
-    <div id="calc-wrap">
-        <form id="calc">
-            <input type="text">
-            <button>^</button>
-            <button>!</button>
-            <button>±</button>
-            <button>C</button>
-            <button>()</button>
-            <button>%</button>
-            <button>/</button>
-            <button>asin</button>
-            <button>sin</button>
-            <button>^-1</button>
-            <button class="digit">7</button>
-            <button class="digit">8</button>
-            <button class="digit">9</button>
-            <button>*</button>
-            <button>acos</button>
-            <button>cos</button>
-            <button>√</button>
-            <button class="digit">4</button>
-            <button class="digit">5</button>
-            <button class="digit">6</button>
-            <button>-</button>
-            <button>atan</button>
-            <button>tan</button>
-            <button>ln</button>
-            <button class="digit">1</button>
-            <button class="digit">2</button>
-            <button class="digit">3</button>
-            <button>+</button>
-            <button>lg</button>
-            <button>π</button>
-            <button>e</button>
-            <button class="digit">0</button>
-            <button>,</button>
-            <button>=</button>
-        </form>
+    <div class="full-calc-wrap">
+        <div id="calc-wrap" class="wrap">
+            <form id="calc" class="calc">
+                <select name="numSys" id="numSys">
+                    <option value="2">2</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="16">16</option>
+                </select>
+                <input type="text">
+                <button>&</button>
+                <button>|</button>
+                <button>XOR</button>
+                <button>C</button>
+                <button>A&#8594B</button>
+                <select name="numSysTo" id="numSysTo">
+                    <option value="2">2</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="16">16</option>
+                </select>
+                <button>¬</button>
+                <button>&#62&#62</button>
+                <button>&#60&#60</button>
+                <button>=</button>
+                <button>REV</button>
+                <button>+</button>
+                <button>-</button>
+                <button>*</button>
+                <button>/</button>
+                <button>COM</button>
+            </form>
+        </div>
+        <div id="number-wrap" class="wrap">
+            <form id="numbers" class="calc s2">
+                <button>0</button>
+                <button>1</button>
+            </form>
+        </div>
     </div>
     <script src="./client-main.js"></script>
 </body>

@@ -1,3 +1,44 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+:root {
+    --bw: 75px;
+    --bh: 50px;
+}
+
+#calc {
+    display: grid;
+    grid-template-columns: repeat(7, var(--bw));
+    grid-template-rows: repeat(6, var(--bh));
+    gap: 5px;
+}
+
+#calc>button {
+    border-radius: 10px;
+    /* box-shadow: 2px 1px 2px rgb(150, 150, 150); */
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 27px;
+    background-color: rgba(251, 198, 149, 1);
+}
+
+#calc>button:hover {
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(251, 232, 149);
+
+}
+
+#calc-wrap {
+    border: 3px solid black;
+    padding: 20px;
+    display: inline-block;
+    background-color: cadetblue;
+    border-radius: 10px;
+}
+
 #calc button:nth-child(34) {
     grid-column: 4/6;
 }
@@ -8,4 +49,11 @@
 
 #calc button:nth-child(1):hover {
     background-color: rgb(250, 129, 129);
+}
+
+#calc>input {
+    grid-column: 2/8;
+    font-size: 27px;
+    border: 2px solid black;
+    border-radius: 10px;
 }
