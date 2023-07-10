@@ -1,4 +1,5 @@
 const express = require("express");
+const Num = require("./Numeral");
 var Parser = require('expr-eval').Parser;
 const parser = new Parser();
 
@@ -12,8 +13,6 @@ app.get("/", function(request, response){
     // отправляем ответ
     response.send("<h2>Привет Express!</h2>");
 });
-
-
 
 app.post('/api/data', (req, res) => {
     let mess = req.body;

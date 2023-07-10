@@ -57,6 +57,28 @@ function clickDigit(e){
     paste(e.target.textContent);
 }
 
+const choises = document.querySelector('#choise').children;
+let numbers = document.querySelector('#numbers');
+function changeStartSystem(e){
+    let val = choises[1].value;
+    if(val==='2') {
+        numbers.innerHTML=inner2;
+        numbers.className = 'calc s2';
+    }
+    else if(val==='8') {
+        numbers.innerHTML=inner8;
+        numbers.className = 'calc s8';
+    }
+    else if(val==='10') {
+        numbers.innerHTML=inner10;
+        numbers.className = 'calc s10';
+    }
+    else if(val==='16') {
+        numbers.innerHTML=inner16;
+        numbers.className = 'calc s16';
+    }
+}
+choises[1].addEventListener('change', changeStartSystem);
 //math functions
 
 
