@@ -5,19 +5,19 @@ function requestToServer(){
     fetch('/api/data', {
         method: 'POST',
         headers: {
-          'Content-Type': 'text/plain'
+          'Content-Type': 'application/json'
         },
-        body: input.value
+        body: JSON.stringify({val: input.value})
     })
-    .then(response => response.text())
+    .then(response => response.json())
     .then(data => {
-        console.log(data);
-        input.value = data;
+        console.log(data.val);
+        input.value = data.val;
         // Делайте с данными, полученными от сервера, что вам нужно
     })
     .catch(error => {
         console.log('Ошибка: ', error);
-        input.value = 'Error: invalid expression';
+        input.value = 'Error: invalid expr';
     });
 }
 

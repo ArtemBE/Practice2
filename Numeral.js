@@ -100,7 +100,7 @@ function trans(val, a, b){
 function transNoZero(val, a, b){
     if(a===10) return trans(val, a, b);
     let vals=String(val);
-    while(vals[0]==='0') vals=vals.slice(1);
+    while(vals[0]==='0' && vals.length>1) vals=vals.slice(1);
     return trans(vals, a, b);
 }
 
