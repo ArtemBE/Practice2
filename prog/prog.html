@@ -5,58 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="./style-prog.css">
+    <link rel="stylesheet" href="/style.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="full-calc-wrap">
-        <div id="calc-wrap" class="wrap">
-            <form id="calc" class="calc">
-                <input type="text">
-                <button>&</button>
-                <button>|</button>
-                <button>XOR</button>
-                <button>C</button>
-                <button>A&#8594B</button>
-                
-                <button>¬</button>
-                <button>&#62&#62</button>
-                <button>&#60&#60</button>
-                <button>=</button>
-                <button>REV</button>
-                <button>+</button>
-                <button>-</button>
-                <button>*</button>
-                <button>/</button>
-                <button>COM</button>
-            </form>
+    <header>
+        <div class="header-wrap">
+            <nav>
+                <div class="home">
+                    <a href="/index.html"><img src="/icons/home.svg" alt=""></a>
+                </div>
+                <div class="menu">
+                    <a href="/main/mainn.html"><b>common</b></a>
+                    <a href="/prog/prog.html"><b>prog</b></a>
+                </div>
+            </nav>
         </div>
-        <div id="number-wrap" class="wrap">
-            <form id="numbers" class="calc s2">
-                <button>0</button>
-                <button>1</button>
-            </form>
+    </header>
+    <main>
+        <div class="full-calc-wrap">
+            <div id="calc-wrap" class="wrap">
+                <form id="calc" class="calc">
+                    <input type="text">
+                    <button>&</button>
+                    <button>|</button>
+                    <button>XOR</button>
+                    <button>C</button>
+                    <button>A&#8594B</button>
+                    
+                    <button>¬</button>
+                    <button>&#62&#62</button>
+                    <button>&#60&#60</button>
+                    <button>=</button>
+                    <button>REV</button>
+                    <button>+</button>
+                    <button>-</button>
+                    <button>*</button>
+                    <button>/</button>
+                    <button>COM</button>
+                </form>
+            </div>
+            <div id="choise-wrap" class="wrap">
+                <form id="choise" class="choise">
+                    <label for="n1">Исходная СС</label>
+                    <select name="numSys" id="n1">
+                        <option value="2">2</option>
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                        <option value="16">16</option>
+                    </select>
+                    <label for="n2">Конечная СС</label>
+                    <select name="numSysTo" id="n2">
+                        <option value="2">2</option>
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                        <option value="16">16</option>
+                    </select>
+                    <label for="n3">Разрядность</label>
+                    <input type="number" id="n3" value="16">
+                </form>
+            </div>
+            <div id="number-wrap" class="wrap">
+                <form id="numbers" class="calc s2">
+                    <button>0</button>
+                    <button>1</button>
+                </form>
+            </div>
         </div>
-        <div id="choise-wrap" class="wrap">
-            <form id="choise" class="choise">
-                <label for="n1">Исходная СС</label>
-                <select name="numSys" id="n1">
-                    <option value="2">2</option>
-                    <option value="8">8</option>
-                    <option value="10">10</option>
-                    <option value="16">16</option>
-                </select>
-                <label for="n2">Конечная СС</label>
-                <select name="numSysTo" id="n2">
-                    <option value="2">2</option>
-                    <option value="8">8</option>
-                    <option value="10">10</option>
-                    <option value="16">16</option>
-                </select>
-                <label for="n3">Разрядность</label>
-                <input type="number" id="n3" value="16">
-            </form>
-        </div>
-    </div>
+    </main>
+    
     <script src="./client-prog.js"></script>
 </body>
 </html>

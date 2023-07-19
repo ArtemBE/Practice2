@@ -120,6 +120,9 @@ app.get('/index.html', (request, response) => {
     console.log(__dirname);
 });
 
+app.get('/icons/home.svg', (request, response) => {
+    response.sendFile(__dirname + '/icons/home.svg');
+});
 
 
 // начинаем прослушивать подключения на 3000 порту
