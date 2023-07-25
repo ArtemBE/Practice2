@@ -12,11 +12,11 @@ parser.consts.π = Math.PI;
 const app = express();
 app.use(express.json());
 // определяем обработчик для маршрута "/"
-app.get("/", function(request, response){
+/* app.get("/", function(request, response){
     // отправляем ответ
     response.send("<h2>Привет Express!</h2>");
 });
-
+ */
 app.post('/api/data', (req, res) => {
     let mess = req.body.val;
     console.log('Получено сообщение от клиента: ', mess);
@@ -27,7 +27,7 @@ app.post('/api/data', (req, res) => {
         result = '' + parser.evaluate(mess);
     }
     catch(err){
-        result = 'Error: invalid expression';
+        result = 'Ошибка на стороне сервера';
     }
     res.send({val: '' + result});
 });
@@ -114,6 +114,10 @@ app.get('/prog/client-prog.js', (request, response) => {
 
 app.get('/style.css', (request, response) => {
     response.sendFile(__dirname + '/style.css');
+});
+app.get('/', (request, response) => {
+    response.sendFile(__dirname + '/index.html');
+    console.log(__dirname);
 });
 app.get('/index.html', (request, response) => {
     response.sendFile(__dirname + '/index.html');
